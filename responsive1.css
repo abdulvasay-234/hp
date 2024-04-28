@@ -1,0 +1,858 @@
+
+@media only screen and (min-width: 1200px) and (max-width: 1566px) {    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    } 
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #850c2a; /* Fallback color */
+    background-image: linear-gradient(to right, #5a1929, #312424, #5a1929); /* Gradient background */
+  }
+
+  html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+  }
+  
+  .video-background {
+    position: fixed; /* Position fixed to cover entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind other content */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+  }
+  
+  .video-background video {
+    width: auto; /* Set width to auto for dynamic resizing */
+    height: 100%; /* Ensure video covers entire viewport */
+    min-width: 100%; /* Set minimum width to ensure video covers entire viewport */
+    min-height: 100%; /* Set minimum height to ensure video covers entire viewport */
+    object-fit: cover; /* Ensure video covers entire viewport */
+  }
+  
+  /* Navigation container styles */
+  /* Navigation container styles */
+  /* Navigation container styles */
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 50px; /* Adjust left padding */
+    right: 50px; /* Adjust right padding */
+    width: calc(100% - 100px); /* Calculate width to subtract left and right padding */
+    margin-top: 0.6%;
+    padding: 5px 20px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, top 0.3s; /* Add transition for smooth effect */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .nav-container.hidden {
+    top: -125px; /* Move the navigation bar above the viewport */
+  }
+  
+  /* Navigation bar styles */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  
+  .logo-container {
+    background-color: #730c26;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    padding: 55px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+  
+  
+  .logo-container:hover {
+    transform: scale(1.03); /* Enlarge on hover */
+    margin-top: -5px; /* Bring up slightly on hover */
+  }
+  
+  
+  .logo {
+    padding: 0; /* Reset padding */
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+    margin-left: -45px;
+    margin-top: -50px;
+}
+  
+  /* Sponsor button container styles */
+  .sponsor-btn {
+    margin-left: 580px;
+    position: relative; /* Added position relative for z-index */
+  }
+  
+  /* Dropdown button container styles */
+  .dropdown {
+    margin-right: 500px; /* Pushes both to the right */
+    position: relative; /* Added position relative for z-index */
+    
+  }
+  
+  /* Sponsor button styles */
+  .sponsor-btn button {
+    background-color: #730c26; /* Green */
+    color: white;
+    padding: 12px 60px; /* Increased button size */
+    border: none;
+    border-radius: 12px; /* Increased border radius */
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s; /* Transition all properties */
+    z-index: 1; /* Ensure button stays on top when hovered */
+  }
+  
+  .sponsor-btn button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.1); /* Enlarge button on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
+  /* Dropdown button styles */
+  .dropbtn {
+    background-color: #730c26; /* Blue */
+    color: white;
+    padding: 12px 20px; /* Adjusted button padding */
+    border: none;
+    border-radius: 8px; /* Increased border radius */
+    cursor: pointer;
+    transition: all 0.3s; /* Transition all properties */
+    z-index: 1; /* Ensure button stays on top when hovered */
+    margin-left:10px;
+  }
+  
+  .dropbtn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.1); /* Enlarge button on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
+  /* Dropdown content styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 8px; /* Increased border radius */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  /* Main container styles */
+  .main-container {
+    background-color: #c81543; /* Fallback color */
+    background-image: linear-gradient(to right, #c81543, #000000, #c81543);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 12%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+  }
+  
+  .main-container:hover {
+    transform: scale(1.004); /* Enlarge the container slightly */
+  }
+  
+  
+  /* Hackathon info container */
+  .hackathon-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Logo styling */
+  .hackathon-info img {
+    width: 900px; /* Increased logo size */
+    height: 250px; /* Maintain aspect ratio */
+    margin-top: 3%;
+    align-items: center;
+    transition: transform 0.3s; /* Add transition effect */
+  }
+  /* Text styling */
+  .hackathon-info h2 {
+    font-size: 40px; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between text and dates */
+    font-family: "Times New Roman", Times, serif; /* Good bold font */
+    color: rgb(223, 236, 248);
+    transition: font-size 0.3s; /* Add transition effect */
+    margin-top: 1%;
+  }
+  .hackathon-info p {
+    font-size: 25px; /* Larger font size */
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px; /* Space between dates and buttons */
+    color: whitesmoke;
+    transition: font-size 0.3s; /* Add transition effect */
+  }
+  .hackathon-info img.map-icon {
+    width: 70px;
+  height: 70px; /* Adjust the size of the map icon */
+    vertical-align: middle; /* Align the icon vertically with text */
+    margin-right: 20px; /* Add some space between the icon and text */
+    display: inline-block;
+    margin-bottom: 38px;
+  }
+  
+  
+  /* Buttons container */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Add gap between buttons */
+  }
+  
+  .buttons button {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 354px; /* Adjust width to fit content */
+    height: 112px;
+    color: rgb(240, 218, 218);
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(rgba(245, 166, 35, 1), rgba(245, 166, 35, 1));
+    padding: 0 20px; /* Add padding for spacing */
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+  
+  .buttons button:hover {
+    background: linear-gradient(rgba(199, 158, 90, 1), rgba(248, 231, 28, 1));
+  }
+  
+  /* Link styling */
+  .buttons a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Icon styling */
+  .buttons button img {
+    width: 50px;
+    height: 48px;
+    margin-right: 10px; /* Add space between icon and text */
+  }
+  .hackathon-info .devfolio-image {
+    width: 358px;
+    height: 120px;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+}
+  
+  
+  /* Section styles */
+  section {
+    margin-bottom: 40px;
+  }
+  
+  /* Add hover effect to sections */
+  section:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+  }
+  /* About Us section styles */
+  #about.container {
+    padding: 40px;
+    background-color: #850c2a; /* Dark red background */
+    border-radius: 20px;
+    margin-top: 15%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #about.container:hover {
+    transform: scale(1.01); /* Enlarge the container slightly */
+  }
+  
+  
+  /* Heading container */
+  #about .heading-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Back text */
+  #about .back-text {
+    font-size: 180px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: rgba(255, 255, 255, 0.1); /* Opaque white color */
+    position: absolute;
+    margin-top: 4%;
+    top: 60%;
+    left: 0.1%;
+    transform: translateY(-50%);
+    z-index: 1; /* Adjusted z-index */
+  }
+  
+  /* Front text */
+  #about .front-text {
+    font-size: 120px; /* Smaller font size */
+    color: #fff; /* White color */
+    font-weight: bold;
+    position: absolute;
+    margin-top: 3%;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure front text is on top */
+    transition: transform 0.3s, z-index 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #about.container:hover .front-text {
+    transform: translateY(-50%) scale(1.1); /* Enlarge and move towards the screen on hover */
+    z-index: 3; /* Ensure front text is on top when hovered */
+  }
+  
+  /* Content container */
+  #about .content {
+    text-align: center;
+    margin-top: 13%;
+    transition: transform 0.3s, z-index 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #about.container:hover .content {
+    transform: scale(1.03); /* Enlarge the content on hover */
+    z-index: 3; /* Ensure content is on top when hovered */
+  }
+  
+  
+  /* Text styling */
+  #about .content p {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #f2f2f2; /* Light gray color */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px;
+    margin-top: 5%;
+  }
+  
+  /* Highlighted words */
+  #about .content p span {
+    font-weight: bold;
+    color: #f46d24; /* Orange color */
+  }
+  
+  /* Image styling */
+  #about .content img {
+    width: 50%; /* Make image fill container */
+    border-radius: 20px; /* Rounded corners */
+    margin-bottom: 20px;
+    transition: transform 0.3s, z-index 0.3s; /* Add transition for smooth effect */
+    margin-top: 3%;
+  }
+  
+  #about.container:hover .content img {
+    transform: scale(1.1); /* Enlarge the image on hover */
+    z-index: 3; /* Ensure image is on top when hovered */
+  }
+  
+  
+  /* Tracks section styles */
+  #tracks.container {
+    padding: 40px;
+    background-color: #850c2a; /* Dark red background */
+    border-radius: 20px;
+    margin-top: 8%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #tracks.container:hover {
+    transform: scale(1.01); /* Enlarge the container slightly */
+  }
+  
+  /* Heading container */
+  #tracks .heading-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Back text */
+  #tracks .back-text {
+    font-size: 180px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: rgba(255, 255, 255, 0.1); /* Opaque white color */
+    position: absolute;
+    margin-top: 4%;
+    top: 60%;
+    left: 0.1%;
+    transform: translateY(-50%);
+    z-index: 1; /* Adjusted z-index */
+  }
+  
+  /* Front text */
+  #tracks .front-text {
+    font-size: 120px; /* Smaller font size */
+    color: #fff; /* White color */
+    font-weight: bold;
+    position: absolute;
+    margin-top: 3%;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure front text is on top */
+    transition: transform 0.3s, z-index 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #tracks.container:hover .front-text {
+    transform: translateY(-50%) scale(1.1); /* Enlarge and move towards the screen on hover */
+    z-index: 3; /* Ensure front text is on top when hovered */
+  }
+  
+  /* Tracks container */
+  .tracks-container {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between tracks */
+  }
+  
+  /* Individual track */
+  .track {
+    text-align: center;
+    width: calc(20% - 20px); /* Set width for each track with gap */
+  }
+  
+  /* Track image */
+  .track img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s, z-index 0.3s; /* Add transition for smooth effect */
+    margin-top: 40%;
+  }
+  
+  .track:hover img {
+    transform: scale(1.3); /* Enlarge the image on hover */
+    z-index: 3; /* Ensure image is on top when hovered */
+  }
+  
+  /* Track name */
+  .track p {
+    color: #fff; /* White color */
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .track:hover p {
+    color: #60ff65; /* Orange color */
+    transform: scale(1.1); /* Enlarge the text on hover */
+  }
+  .track p {
+    color: #FFE;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  /* Highlighted words */
+  .track p span {
+    font-weight: bold;
+    color: #f46d24; /* Orange color */
+  }
+  
+  
+  /* FAQs section styles */
+  #faqs.container {
+    padding: 40px;
+    background-color: #850c2a; /* Dark red background */
+    border-radius: 20px;
+    margin-top: 7%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+  }
+  .highlighted-email {
+    color: yellow;
+    cursor: pointer;
+  }
+  
+  #faqs.container:hover {
+    transform: scale(1.01); /* Enlarge the container slightly */
+  }
+  
+  /* Heading container */
+  #faqs .heading-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Back text */
+  #faqs .back-text {
+    font-size: 180px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: rgba(255, 255, 255, 0.1); /* Opaque white color */
+    position: absolute;
+    margin-top: 4%;
+    top: 60%;
+    left: 0.1%;
+    transform: translateY(-50%);
+    z-index: 1; /* Adjusted z-index */
+  }
+  
+  /* Front text */
+  #faqs .front-text {
+    font-size: 120px; /* Smaller font size */
+    color: #fff; /* White color */
+    font-weight: bold;
+    position: absolute;
+    margin-top: 4%;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure front text is on top */
+    transition: transform 0.3s, z-index 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #faqs.container:hover .front-text {
+    transform: translateY(-50%) scale(1.1); /* Enlarge and move towards the screen on hover */
+    z-index: 3; /* Ensure front text is on top when hovered */
+  }
+  
+  /* FAQs container */
+  .faqs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Gap between FAQ items */
+    margin-top: 14%;
+  }
+  
+  /* FAQ item */
+  .faq-item {
+    background-color: #000000; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Enlarge and move up when hovered */
+  .faq-item:hover {
+    transform: translateY(-5px) scale(1.03); /* Move up slightly and enlarge */
+  }
+  
+  /* FAQ question */
+  .faq-question {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer; /* Add pointer cursor for interaction */
+    color: #f2f2f2;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Question icon */
+  .question-icon {
+    width: 30px; /* Adjust icon size */
+    color: #f1f1f1;
+  }
+  
+  /* FAQ answer */
+  .faq-answer {
+    margin-top: 1.5%;
+    display: none; /* Hide answer by default */
+    color: #f2f2f2;
+    font-size: large;
+    gap: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Show answer when FAQ question is clicked */
+  .faq-question.active + .faq-answer {
+    display: block;
+    font-size: large;
+    gap: 5px;
+  }
+  
+  /* Answer icon */
+  .answer-icon {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    margin-left: 0.5%;
+  }
+  
+  /* Question text */
+  .faq-question p {
+    margin: 0;
+  }
+  
+  /* FAQ question container */
+  .faq-question {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Question icon */
+  .question-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  /* FAQ answer container */
+  .faq-answer {
+    display: none; /* Initially hide the answer */
+  }
+  
+  /* Add CSS for dropdown button */
+  .dropdown-btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff; /* Background color of the button */
+    border-radius: 50%; /* Make it circular */
+    text-align: center;
+    line-height: 30px;
+  }
+  
+  /* Style the dropdown icon */
+  .dropdown-icon {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+  }
+  
+  /* Rotate the dropdown icon when the dropdown is open */
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
+  
+  
+  /* Sponsors section styles */
+  #sponsors.container {
+    padding: 40px;
+    background-color: #850c2a; /* Dark red background */
+    border-radius: 20px;
+    margin-top: 8%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #sponsors.container:hover {
+    transform: scale(1.01); /* Enlarge the container slightly */
+  }
+  
+  /* Heading container */
+  #sponsors .heading-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Back text */
+  #sponsors .back-text {
+    font-size: 180px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: rgba(255, 255, 255, 0.1); /* Opaque white color */
+    position: absolute;
+    margin-top: 4%;
+    top: 60%;
+    left: 0.1%;
+    transform: translateY(-50%);
+    z-index: 1; /* Adjusted z-index */
+  }
+  
+  /* Front text */
+  #sponsors .front-text {
+    font-size: 120px; /* Smaller font size */
+    color: #fff; /* White color */
+    font-weight: bold;
+    position: absolute;
+    margin-top: 3%;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure front text is on top */
+    transition: transform 0.3s, z-index 0.3s; /* Add transition for smooth effect */
+  }
+  
+  #sponsors.container:hover .front-text {
+    transform: translateY(-50%) scale(1.1); /* Enlarge and move towards the screen on hover */
+    z-index: 3; /* Ensure front text is on top when hovered */
+  }
+  
+  /* Sponsor type styles */
+  .sponsor-type {
+    margin-bottom: 40px;
+    margin-top: 13%;
+  }
+  
+  .sponsor-type h2 {
+    font-size: 54px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration-line: underline;
+    text-decoration-thickness: 10px; 
+    text-underline-offset: 10px;
+    color: #ffffff;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .sponsor-type h2:hover {
+    transform: scale(1.03); 
+  }
+  
+  /* Partner styles */
+  .partner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 2px;
+  }
+  
+  
+  .partner-info p {
+    margin-top: 5px;
+  }
+  .venue-partner-logos{
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-top: -10%;
+    margin-left: 1%;
+  }
+  
+  .partner-info p.p1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 67px;
+    font-weight: bolder;
+    margin-left: 150px;
+    margin-top: 8%;
+    color: #ffffff;
+}
+  
+  .partner-info p.p2 {
+    font-size: 27px;
+    margin-left: 40px;
+    margin-top: 0.1%;
+    font-weight: bold;
+    color: #ffffff;
+}
+  
+  .partner-info p.p3 {
+    font-size: 27px;
+    margin-left: 40px;
+    margin-top: 0.1%;
+    font-weight: lighter;
+    color: #c1bebe;
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: #e6e2e0a7;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 7px;
+}
+  
+  .partner-info p.p4 {
+    font-size: 132px;
+    margin-left: 120px;
+    margin-top: 2%;
+    font-weight: bold;
+    color: #ffffff;
+    visibility: hidden;
+  }
+  
+  /* Accessing Gold Partner elements in CSS */
+  .gold-partner {
+    margin-top: 3%;
+  }
+  .gold-partner .gold-partner-logo {
+    margin-left: 12%;
+  width: 350px;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 2%;
+  }
+  .gold-partner .gold-partner-logo:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+  }
+  
+  /*platform partner*/
+  .platform-partner .platform-partner-logo {
+    width: 350px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 5%;
+    margin-left: 4%;
+  }
+  .platform-partner .platform-partner-logo:hover {
+    transform: scale(1.1); 
+  }
+  
+  .silver-partner-logo {
+    width: 350px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 5%;
+    margin-left: 4%;
+  }
+  .silver-partner-logo:hover{
+    transform: scale(1.1); 
+  }
+  
+  /*venue partner*/
+  .venue-partner-logo {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 5%;
+    margin-left: 4%;
+  }
+  .venue-partner-logo:hover{
+    transform: scale(1.1); 
+  }
+  
+  .sponsor-type .partner-info .p1 {
+    color:#ffffff;
+  }
+         
+}
